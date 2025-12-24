@@ -1,0 +1,10 @@
+__pycache__/
+*.pkl
+*.joblib
+.ipynb_checkpoints/
+.env
+.DS_Store
+.vscode/
+*.h5
+*.ckpt
+*.pth
