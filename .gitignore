@@ -1,4 +1,20 @@
 __pycache__/
+*.pyc
+env/
+venv/
+dist/
+build/
+.pytest_cache/
+.vscode/
+*.egg-info/
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Model artifacts (if you prefer keeping them out of git, uncomment)
+# models/churn_pipeline.joblib
+__pycache__/
 *.pkl
 *.joblib
 .ipynb_checkpoints/

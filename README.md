@@ -26,19 +26,29 @@ customer-churn-prediction/
 └── .gitignore
 ```
 
-## ▶️ Run locally
+## Run locally
 
-Install dependencies:
+### 1) Train + save model
+Run the notebook or training script so `models/churn_pipeline.joblib` exists.
 
-```powershell
+### 2) Start FastAPI backend
+```bash
 pip install -r requirements.txt
+uvicorn backend.app:app --reload --port 8000
 ```
 
-Open the notebook:
+### Using Docker (recommended)
+Both the backend and frontend use the single `requirements.txt` at the repository root. The compose file builds with the repository root as the build context and points each service at its service Dockerfile so both services install the same dependencies.
 
+To build and run both services with Docker Compose:
 ```powershell
-cd 'C:\Users\varsh\Downloads\customer-churn-prediction'
-jupyter notebook notebooks/01_eda_and_modeling.ipynb
+docker-compose up --build
+```
+
+To build images individually (optional):
+```powershell
+docker build -f backend/Dockerfile -t churn-backend .
+docker build -f frontend/Dockerfile -t churn-frontend .
 ```
 
 ## ✅ Tips

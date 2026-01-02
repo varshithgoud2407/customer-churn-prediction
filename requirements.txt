@@ -1,7 +1,16 @@
+# Requirements for the project
+# Note: `jupyter` (the meta-package) is omitted because it pulls many
+# build-time dependencies that can fail to build on some systems. If you
+# need Jupyter, install it separately in your development environment.
 pandas
 numpy
 scikit-learn
+joblib
+fastapi
+uvicorn
+streamlit
+requests
 matplotlib
 seaborn
-joblib
-jupyter
+
+
