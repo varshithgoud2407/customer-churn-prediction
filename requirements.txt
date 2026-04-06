@@ -12,5 +12,8 @@ streamlit
 requests
 matplotlib
 seaborn
+xgboost
+optuna
+imbalanced-learn
 
 
